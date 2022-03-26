@@ -1,0 +1,19 @@
+// ======================================
+//  Navigation Styles
+// ======================================
+
+nav {
+    background-color: $color-primary-dark;
+    @include flex;
+    width: 100%;
+    a{
+        @include flex-1;
+        text-align: center;
+        svg {
+            fill: $color-white;
+        }
+    }
+    @media (min-width: map-get($breakpoints, 'med')) {
+        flex-direction: column;
+    }
+}
