@@ -8,7 +8,7 @@ header {
   text-align: center;
 
   svg {
-    flex-grow: .75;
+    flex-grow: .1;
     border-right: solid $color-white 2px;
   }
   img {
@@ -16,6 +16,9 @@ header {
     margin-top: 0.2rem;
     margin-left: 0.5rem;
     @include flex-1;
+  }
+  #logo-name{
+     font-size: 1.5rem;
   }
   p {
     margin-left: 0.5rem;

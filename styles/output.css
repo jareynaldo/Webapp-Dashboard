@@ -337,8 +337,67 @@ template {
   display: none;
 }
 
-#gird-box {
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+#grid-box {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 3rem 3rem 3rem auto;
+  gap: 0 0;
+  grid-template-areas: "header header header" "nav nav nav" "tittle tab tab" "dashboard dashboard dashboard";
+}
+#grid-box .mainContent {
+  grid-column-start: auto;
+  grid-row-start: 3;
+}
+#grid-box .tittle {
+  padding: 1rem;
+  z-index: 2;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+}
+#grid-box header {
+  grid-area: header;
+}
+#grid-box nav {
+  grid-area: nav;
+}
+#grid-box .mainContent {
+  grid-area: dashboard;
+}
+#grid-box .tittle {
+  grid-area: tittle;
+}
+#grid-box .tab {
+  grid-area: tab;
+}
+@media (min-width: 768px) {
+  #grid-box {
+    grid-template-columns: 4rem 1fr 1fr;
+    grid-template-areas: "header header header" "nav tittle tab " "nav dashboard dashboard" "nav dashboard dashboard";
+  }
+  #grid-box .mainContent {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  #grid-box .tab {
+    grid-column-start: 3;
+  }
+}
+@media (min-width: 992px) {
+  #grid-box {
+    grid-template-columns: 4rem 1fr 1fr 1fr;
+    grid-template-areas: "header header header header" "nav tittle tab tab " "nav dashboard dashboard dashboard" "nav dashboard dashboard dashboard";
+  }
+  #grid-box .mainContent {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  #grid-box .tab {
+    grid-column-start: 3;
+  }
 }
 
 img {
@@ -363,17 +422,21 @@ nav a {
   text-align: center;
 }
 nav a svg {
-  fill: #cacaca;
+  fill: #eeeeee;
 }
 @media (min-width: 768px) {
   nav {
     flex-direction: column;
+    width: 4rem;
+    height: auto;
+    display: block;
+    text-align: center;
   }
 }
 
 header {
   background-color: #8130df;
-  color: #cacaca;
+  color: #eeeeee;
   height: 3rem;
   width: 100%;
   display: flex;
@@ -381,14 +444,17 @@ header {
   text-align: center;
 }
 header svg {
-  flex-grow: 0.75;
-  border-right: solid #cacaca 2px;
+  flex-grow: 0.1;
+  border-right: solid #eeeeee 2px;
 }
 header img {
   height: 40px;
   margin-top: 0.2rem;
   margin-left: 0.5rem;
   flex-grow: 1;
+}
+header #logo-name {
+  font-size: 1.5rem;
 }
 header p {
   margin-left: 0.5rem;
@@ -402,6 +468,15 @@ header p {
     margin-left: 1rem;
     font-size: 2rem;
   }
+}
+
+.main {
+  background-color: #eeeeee;
+}
+
+.tab {
+  background-color: white;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=output.css.map */
