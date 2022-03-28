@@ -1,0 +1,15 @@
+// ======================================
+//  form styles
+// ======================================
+
+
+form { 
+    display: flex;
+    flex-direction: column;
+    input{ 
+        @include message (2rem);
+    }
+    textarea {
+        @include message (5rem);
+    }
+}

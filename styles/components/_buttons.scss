@@ -1,3 +1,9 @@
 // ======================================
 //  Button Styles
 // ======================================
+
+button { 
+    @include message (3rem); 
+    background-color: $color-primary;
+    color: white;
+}

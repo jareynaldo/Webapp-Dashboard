@@ -5,64 +5,87 @@
 
 #grid-box {
     display: grid;
-    grid-template-columns:1fr 1fr 1fr ;
-    grid-template-rows: 3rem 3rem 3rem auto ;
+    text-align: center;
+    grid-template-columns:  100vw ;
+    grid-template-rows: 3rem 3rem auto;
     gap: 0 0;
     grid-template-areas: 
-    "header header header"
-    "nav nav nav"
-    "tittle tab tab"
-    "dashboard dashboard dashboard"
+    "head head"
+    "navigation navigation"
+    "mainContent mainContent"
     ;
-    .mainContent { 
-        grid-column-start: auto ;
-        grid-row-start: 3;
+
+
+    header {grid-area: head;}
+    nav {grid-area: navigation;}
+    .mainContent{  grid-area: mainContent;}
+
+    @media (min-width: map-get($breakpoints, 'med')) {
+        grid-template-columns: 8.5vw 91.5vw;
+        grid-template-rows: 3rem 100%;
+        grid-template-areas: 
+        "head head"
+        "navigation mainContent "
+        "navigation mainContent"
+    ;
+    }
+}
+
+
+
+.mainContent{ 
+    display: grid;
+    grid-template-columns: 100%;
+    // grid-template-areas: 
+    // "tittle tab"
+    // ;
+    
+    
+    .tittle-flex{ 
+        display: flex;
     }
     .tittle {
-        padding: 1rem;
-        z-index: 2;
-        border-top-left-radius: 20% ;
-        border-top-right-radius: 20% ;
+        @include flex-1;
+        font-weight: bolder ;
     }
-
-header {grid-area: header;}
-nav {grid-area: nav;}
-.mainContent {grid-area: dashboard;}
-.tittle {grid-area: tittle;}
-.tab {grid-area: tab;}
-
-@media (min-width: map-get($breakpoints, 'med')) {
-    grid-template-columns: 4rem  1fr 1fr ;
-    grid-template-areas: 
-    "header header header"
-    "nav tittle tab "
-    "nav dashboard dashboard"
-    "nav dashboard dashboard"
-    ;
-    .mainContent { 
-        grid-column-start: 2 ;
-        grid-row-start: 2 ;
+    .tab{ 
+        grid-row-start: 2;
+        grid-row-end: 3;
+        flex-grow: 3;
     }
-    .tab {
-        grid-column-start: 3;
+    .tittle {grid-area: tittle;}
+    // #alert{grid-area: alert;}
+    .daily {grid-area: daily;}
+    .users {grid-area: users;}
+    .social-container {grid-area: social;}
+    .members {grid-area: members;}
+    .recent-activity {grid-area: recent;}
+    .message{grid-area: message;}
+    .settings{grid-area: settings;}
+
+
+
+    @media (min-width: map-get($breakpoints, 'med')) {
+        grid-template-columns: 50% 50%;
+        
+        grid-template-areas: 
+        "tittle  tab"
+        "traffic traffic"
+        "daily users"
+        "social social"
+        "members members"
+        "recent recent"
+        "message message"
+        "settings settings"
+        ;
+        .tab {
+            grid-row-end: 4;
+        }
     }
 }
 
-@media (min-width: map-get($breakpoints, 'lg')) {
-    grid-template-columns: 4rem  1fr  1fr 1fr;
-    grid-template-areas: 
-    "header header header header"
-    "nav tittle tab tab "
-    "nav dashboard dashboard dashboard"
-    "nav dashboard dashboard dashboard"
-    ;
-    .mainContent { 
-        grid-column-start: 2 ;
-        grid-row-start: 2 ;
-    }
-    .tab {
-        grid-column-start: 3;
-    }
-}
-}
 
+    // grid-column-start: 3 ;
+    // grid-column-end: 4 ;
+    // grid-row-start: 1 ;
+    // grid-row-end: 

@@ -1,9 +1,11 @@
 // main html styles
 
-.main { 
-    background-color: $color-white;
+main { 
+    background-color: white;
 }
 .tab{
-     background-color: white;
+     background-color: $color-white;
      padding: 2rem;
+     border-right: 4px black;
+     border-bottom: 4px black;
 }

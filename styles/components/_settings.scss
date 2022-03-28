@@ -1,0 +1,93 @@
+// 
+// styles for the settings notifications
+//
+
+// .switch-light {
+//    display: flex;  
+//    flex-direction: row;
+//    strong{ 
+//        flex-grow: 1;
+//    }
+//    span { 
+//        flex-grow: 1;
+//        background-color: $color-primary;
+//        max-width: 20vw;
+//        margin-right: 1rem;
+//    }
+// }
+.setings, .setings:after, .setings:before {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.inputy[type="checkbox"] {
+	visibility: hidden;
+	&:checked + .labely {
+		transform: rotate(360deg);
+		background-color: #000;
+		&:before {
+			transform: translateX(2.5rem);
+			background-color: $color-primary;
+		}
+	}
+}
+
+.labely {
+    margin-right: 1rem;
+	display: flex;
+	width: 4rem;
+	height: 2rem;
+	box-shadow: 0 0 2px black;
+	border-radius: 15px;
+    padding-left: 2rem;
+    padding-top: .5rem;
+	position: relative;
+	transition: transform .75s ease-in-out;
+	transform-origin: 50% 50%;
+	cursor: pointer;
+    background-color: $color-primary;
+	
+	&:before {
+		transition: transform .75s ease;
+		transition-delay: .5s;
+		content: "";
+		display: block;
+		position: absolute;
+		width: 1rem;
+		height: 1rem;
+		background-color: white;
+		border-radius: 50%;
+		left: 2px;
+	}
+   
+}
+
+.switch{ 
+    padding-left: 1rem;
+    display: flex;
+    width: 100%;
+    p {
+        flex-grow: 1;
+    }
+    input, label{ 
+        flex-grow: 1;
+        min-width: 5rem;
+    }
+}
+select {
+    @include message(3rem);
+    width: 80%;
+}
+#save { 
+    width: 30%;
+}
+#cancel{ 
+    background-color: grey;
+    width: 30%;
+}

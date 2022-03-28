@@ -1,0 +1,28 @@
+// styles for the traffic 
+// and daily traffic divs 
+
+.chosen { 
+    background-color: rgb(33, 163, 33);
+    border-radius: 30%;
+}
+.traffic{ 
+    h3{ 
+        @include header;
+    }
+    ul{ 
+        display: flex;
+        li { 
+            flex-grow: 1;
+            list-style-type: none;
+            font-weight: 900;
+        }
+      
+    }
+
+        border-bottom: 50px $color-text;
+}
+.daily{ 
+    h3 {
+        @include header;
+    }
+}

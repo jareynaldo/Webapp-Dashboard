@@ -1,0 +1,21 @@
+
+// styles for the two members tags 
+.members{
+    border-top: 1px solid rgb(133, 132, 132) ;
+}
+.members-container { 
+    border-bottom: 1px solid rgb(133, 132, 132) ;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 1rem;
+    img{ 
+        height: 4rem;
+        min-width: 40px;
+    }
+    .members-text{   
+        a { 
+            text-decoration: none;
+        }
+    }
+    
+}

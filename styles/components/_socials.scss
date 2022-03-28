@@ -1,0 +1,27 @@
+// 
+// styles for the social stats 
+
+
+.facebook{ 
+  @include socials(".facebook");
+}
+.instagram {
+    @include socials(".instagram");
+}
+.twitter {
+    @include socials(".twitter");
+}
+
+@media (min-width: map-get($breakpoints, 'med')) {
+  .social-markup {
+    box-sizing: content-box;
+     display: flex;
+     flex-wrap: wrap;
+     h3{ 
+       flex-grow: 3;
+     }
+     div{ 
+       flex-grow: 1;
+     }
+  }
+}
