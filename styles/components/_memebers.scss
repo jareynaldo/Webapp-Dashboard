@@ -2,20 +2,52 @@
 // styles for the two members tags 
 .members{
     border-top: 1px solid rgb(133, 132, 132) ;
+
 }
+
+
 .members-container { 
     border-bottom: 1px solid rgb(133, 132, 132) ;
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 1rem;
+    min-height:7rem;
     img{ 
         height: 4rem;
-        min-width: 40px;
+        
     }
     .members-text{   
         a { 
             text-decoration: none;
         }
     }
-    
+    @media (min-width: map-get($breakpoints, 'med')) { 
+        display: flex;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        img{ 
+            flex-grow: 1;
+        }
+        .members-text{ 
+            flex-grow: 5;
+        }
+        p { 
+            flex-grow: 1;
+        }
+    }
+}
+@media (min-width: map-get($breakpoints, 'med')) { 
+    .recent-text {
+        text-align: left;
+    }
+    .recent-activity {
+        border-top: 1px solid rgb(133, 132, 132) ;
+        border-left: 1px solid rgb(133, 132, 132) ;
+        img {
+            margin-right: 2rem;
+        } 
+    }
+    .members {
+        border-top: 1px solid rgb(133, 132, 132) ;
+     }
 }

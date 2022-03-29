@@ -21,11 +21,13 @@
   box-shadow: 0 0 2px black;
   height: 5rem;
   margin: 1rem;
+  
  
   #{$name}-image {
         background-color: $color-primary;
         border-radius: 50%; 
         margin: 1rem;
+        max-width: 3.2rem;
       
     }
   
