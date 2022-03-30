@@ -4,9 +4,28 @@ h3 {
   font-weight: 900;
 }
 
-.alert-banner-close {
-  background-color: #8130df;
+.alert-banner {
+  display: flex;
+  flex-direction: row;
+  background-color: #112a61;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+  margin-right: 1.2rem;
+  margin-left: 1.2rem;
+  width: 90vw;
+  color: #eeeeee;
   border-radius: 5px;
+  height: 3.5rem;
+}
+@media (min-width: 768px) {
+  .alert-banner {
+    width: 85vw;
+  }
+}
+
+.alert-banner-close {
+  text-align: right;
+  width: 48%;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -357,7 +376,7 @@ button {
   margin: 1rem;
   background-color: #eeeeee;
   border-radius: 5px;
-  background-color: #8130df;
+  background-color: #112a61;
   color: white;
 }
 
@@ -409,22 +428,18 @@ form textarea {
     grid-template-rows: 3rem 100%;
     grid-template-areas: "head head" "navigation mainContent " "navigation mainContent";
   }
-  #grid-box * {
-    font-size: 1.2vw;
-  }
 }
 
 .mainContent .tittle-flex {
   display: flex;
+  width: 100vw;
 }
 .mainContent .tittle {
   flex-grow: 1;
   font-weight: bolder;
 }
 .mainContent .tab {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  flex-grow: 3;
+  flex-grow: 6;
 }
 @media (min-width: 768px) {
   .mainContent {
@@ -437,6 +452,9 @@ form textarea {
   }
   .mainContent .social-container {
     max-width: 94vw;
+  }
+  .mainContent .tittle-flex {
+    width: 91.5vw;
   }
   .mainContent .tittle {
     grid-area: tittle;
@@ -474,7 +492,7 @@ form textarea {
     grid-template-columns: 50% 50%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-areas: "tittle  tab" "traffic traffic" "daily users" "social social" "members recent" "members recent" "message settings";
+    grid-template-areas: "tittle  tab" "alert alert" "traffic traffic" "daily users" "social social" "members recent" "members recent" "message settings";
   }
 }
 
@@ -489,7 +507,7 @@ svg {
 }
 
 nav {
-  background-color: #681dbf;
+  background-color: #091736;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -512,7 +530,7 @@ nav a svg {
 }
 
 header {
-  background-color: #8130df;
+  background-color: #112a61;
   color: #eeeeee;
   height: 3rem;
   width: 100%;
@@ -535,6 +553,9 @@ header img {
 header #logo-name {
   font-size: 1.5rem;
 }
+header strong {
+  font-size: larger;
+}
 header p {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
@@ -545,7 +566,6 @@ header p {
     flex-grow: 4;
     text-align: left;
     margin-left: 1rem;
-    font-size: 2rem;
   }
 }
 
@@ -566,7 +586,8 @@ main {
 }
 
 .traffic {
-  border-top: 1px solid #858484;
+  padding-left: 1rem;
+  border-top: none;
   border-bottom: 50px #000000;
 }
 .traffic h3 {
@@ -582,9 +603,42 @@ main {
   font-weight: 900;
 }
 
+.daily,
+.users {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #858484;
+}
+@media (min-width: 768px) {
+  .daily,
+.users {
+    border-top: 1px solid #858484;
+  }
+}
+
+#mobile-chart,
+#daily-chart {
+  margin-bottom: 2rem;
+}
+
+.daily {
+  width: 90%;
+  padding-right: 7%;
+  padding-left: 3%;
+  margin-top: 2rem;
+  border-top: 1px solid #858484;
+}
 .daily h3 {
   text-align: left;
   padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .daily {
+    border-right: 1px solid #858484;
+  }
+}
+
+.users {
+  margin-top: 2rem;
 }
 
 .facebook {
@@ -595,13 +649,13 @@ main {
   margin: 1rem;
 }
 .facebook .facebook-image {
-  background-color: #8130df;
+  background-color: #112a61;
   border-radius: 50%;
   margin: 1rem;
   max-width: 3.2rem;
 }
 .facebook .social-text p {
-  color: #8130df;
+  color: #112a61;
   font-size: 1rem;
   font-weight: 900;
   margin: 0.4rem;
@@ -620,13 +674,13 @@ main {
   margin: 1rem;
 }
 .instagram .instagram-image {
-  background-color: #8130df;
+  background-color: #112a61;
   border-radius: 50%;
   margin: 1rem;
   max-width: 3.2rem;
 }
 .instagram .social-text p {
-  color: #8130df;
+  color: #112a61;
   font-size: 1rem;
   font-weight: 900;
   margin: 0.4rem;
@@ -645,13 +699,13 @@ main {
   margin: 1rem;
 }
 .twitter .twitter-image {
-  background-color: #8130df;
+  background-color: #112a61;
   border-radius: 50%;
   margin: 1rem;
   max-width: 3.2rem;
 }
 .twitter .social-text p {
-  color: #8130df;
+  color: #112a61;
   font-size: 1rem;
   font-weight: 900;
   margin: 0.4rem;
@@ -660,6 +714,12 @@ main {
   color: #1a1a1a;
   font-size: 1.7rem;
   font-weight: lighter;
+}
+
+.twitter,
+.instagram,
+.facebook {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -691,15 +751,13 @@ main {
 }
 .members-container .members-text a {
   text-decoration: none;
+  font-size: 1.5vw;
 }
 @media (min-width: 768px) {
   .members-container {
     display: flex;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-  }
-  .members-container img {
-    flex-grow: 1;
   }
   .members-container .members-text {
     flex-grow: 5;
@@ -709,9 +767,14 @@ main {
   }
 }
 
-@media (min-width: 768px) {
+.recent-text {
+  margin-left: 1rem;
+}
+
+@media (min-width: 992px) {
   .recent-text {
     text-align: left;
+    margin-left: 1rem;
   }
 
   .recent-activity {
@@ -746,7 +809,7 @@ body {
 }
 .inputy[type=checkbox]:checked + .labely:before {
   transform: translateX(2.5rem);
-  background-color: #8130df;
+  background-color: #112a61;
 }
 
 .labely {
@@ -762,7 +825,7 @@ body {
   transition: transform 0.75s ease-in-out;
   transform-origin: 50% 50%;
   cursor: pointer;
-  background-color: #8130df;
+  background-color: #112a61;
 }
 .labely:before {
   transition: transform 0.75s ease;
@@ -817,6 +880,13 @@ select {
 #cancel {
   background-color: grey;
   width: 30%;
+}
+
+#traffic-chart,
+#daily-chart,
+#users-chart {
+  max-width: 85vw;
+  text-align: center;
 }
 
 /*# sourceMappingURL=output.css.map */

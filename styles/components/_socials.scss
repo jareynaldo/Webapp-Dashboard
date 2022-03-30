@@ -10,6 +10,11 @@
 .twitter {
     @include socials(".twitter");
 }
+.twitter,
+.instagram,
+.facebook { 
+  width: 100%;
+}
 
 @media (min-width: map-get($breakpoints, 'med')) {
   .social-markup {

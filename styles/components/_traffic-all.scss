@@ -6,8 +6,8 @@
     border-radius: 30%;
 }
 .traffic{ 
-
-        border-top: 1px solid rgb(133, 132, 132) ;
+    padding-left: 1rem;
+    border-top:none ;
     
     h3{ 
         @include header;
@@ -24,9 +24,34 @@
 
         border-bottom: 50px $color-text;
 }
+.daily, 
+.users {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgb(133, 132, 132) ;
+    @media (min-width: map-get($breakpoints, 'med')) {
+        border-top: 1px solid rgb(133, 132, 132) ;
+    }
+}
+#mobile-chart, 
+#daily-chart {
+    margin-bottom: 2rem;
+}
+
 .daily{ 
+    width: 90%;
+    padding-right:7% ;
+    padding-left: 3%;
+    margin-top: 2rem;
+    border-top: 1px solid rgb(133, 132, 132) ;
     h3 {
         @include header;
     }
+    
+@media (min-width: map-get($breakpoints, 'med')) {
+    border-right: 1px solid rgb(133, 132, 132);
+}
+}
+.users {
+    margin-top: 2rem;
 
 }

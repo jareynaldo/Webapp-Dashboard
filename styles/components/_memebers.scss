@@ -3,6 +3,7 @@
 .members{
     border-top: 1px solid rgb(133, 132, 132) ;
 
+
 }
 
 
@@ -19,15 +20,15 @@
     .members-text{   
         a { 
             text-decoration: none;
+            font-size: 1.5vw;
         }
+    
     }
     @media (min-width: map-get($breakpoints, 'med')) { 
         display: flex;
         padding-bottom: 1rem;
         margin-bottom: 1rem;
-        img{ 
-            flex-grow: 1;
-        }
+        
         .members-text{ 
             flex-grow: 5;
         }
@@ -36,9 +37,15 @@
         }
     }
 }
-@media (min-width: map-get($breakpoints, 'med')) { 
+
+.recent-text {
+    margin-left: 1rem;
+}
+
+@media (min-width: map-get($breakpoints, 'lg')) { 
     .recent-text {
         text-align: left;
+        margin-left: 1rem;
     }
     .recent-activity {
         border-top: 1px solid rgb(133, 132, 132) ;

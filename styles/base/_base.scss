@@ -7,7 +7,24 @@ h3{
     font-weight: 900;
 }
 
-.alert-banner-close { 
+.alert-banner{ 
+    display: flex;
+    flex-direction: row;
     background-color: $color-primary;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+    width: 90vw;
+    color: $color-white;
     border-radius: 5px;
+    height: 3.5rem;
+
+    @media (min-width: map-get($breakpoints, 'med')) { 
+        width: 85vw;
+    }
+}
+.alert-banner-close {
+    text-align: right;
+    width: 48%;
 }
