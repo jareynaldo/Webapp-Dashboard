@@ -39,6 +39,7 @@
 
 .recent-text {
     margin-left: 1rem;
+    text-align: left;
 }
 
 @media (min-width: map-get($breakpoints, 'lg')) { 

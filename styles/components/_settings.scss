@@ -29,7 +29,7 @@ body {
 		transform: rotate(360deg);
 		background-color: #000;
 		&:before {
-			transform: translateX(2.5rem);
+			transform: translateX(58px);
 			background-color: $color-primary;
 		}
 	}
@@ -39,7 +39,7 @@ body {
     margin-right: 1rem;
 	display: flex;
 	width: 4rem;
-	height: 2rem;
+	height: 25px;
 	box-shadow: 0 0 2px black;
 	border-radius: 15px;
     padding-left: 2rem;
@@ -70,7 +70,9 @@ body {
     display: flex;
     width: 100%;
     p {
-        flex-grow: 1;
+        width: 175%;
+		text-align: left;
+		padding-top: 7px;
     }
     input, label{ 
         flex-grow: 1;
@@ -80,7 +82,7 @@ body {
     }
 	@media (min-width: map-get($breakpoints, 'med'))  {
 		display: grid;
-		grid-template-columns: 25% 25%;
+		grid-template-columns: 30% 25%;
 		input, label{ 
 			grid-column-start: 2;
 			grid-row-start: 1;
@@ -91,10 +93,16 @@ select {
     @include message(3rem);
     width: 80%;
 }
+.settings-button{ 
+	width: 90vw;
+}
+#timezone{ 
+	width: 90%;
+}
 #save { 
-    width: 30%;
+    width: 43%;
 }
 #cancel{ 
     background-color: grey;
-    width: 30%;
+    width: 43%;
 }

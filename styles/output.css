@@ -1,3 +1,7 @@
+html {
+  width: 99vw;
+}
+
 h3 {
   text-align: left;
   padding-left: 1rem;
@@ -407,8 +411,16 @@ form textarea {
   border-radius: 5px;
 }
 
-.message {
-  border-right: 1px solid #858484;
+@media (min-width: 768px) {
+  .message {
+    width: 90vw;
+  }
+}
+@media (min-width: 1024px) {
+  .message {
+    border-right: 1px solid #858484;
+    width: 100%;
+  }
 }
 
 #grid-box {
@@ -662,10 +674,15 @@ main {
 .facebook {
   display: flex;
   box-shadow: 0 0 2px black;
+  width: 98%;
   margin: 1rem;
 }
+@media (min-width: 768px) {
+  .facebook {
+    width: 20%;
+  }
+}
 .facebook .facebook-image {
-  width: 160px;
   flex-grow: 50%;
 }
 .facebook .facebook-image svg {
@@ -677,8 +694,13 @@ main {
   border-radius: 50%;
   fill: white;
 }
-.facebook .social-text {
-  flex-grow: 50%;
+@media (min-width: 768px) {
+  .facebook .facebook-image svg {
+    padding: 10px;
+    margin: 20px;
+    height: 35px;
+    width: 35px;
+  }
 }
 .facebook .social-text p {
   color: #112a61;
@@ -686,19 +708,35 @@ main {
   font-weight: 900;
   margin: 2rem;
 }
+@media (min-width: 768px) {
+  .facebook .social-text p {
+    font-size: 1rem;
+    margin: 0.7rem;
+  }
+}
 .facebook .social-text :last-child {
   color: #1a1a1a;
   font-size: 2.3rem;
   font-weight: lighter;
 }
+@media (min-width: 768px) {
+  .facebook .social-text :last-child {
+    font-size: 1.75rem;
+  }
+}
 
 .instagram {
   display: flex;
   box-shadow: 0 0 2px black;
+  width: 98%;
   margin: 1rem;
 }
+@media (min-width: 768px) {
+  .instagram {
+    width: 20%;
+  }
+}
 .instagram .instagram-image {
-  width: 160px;
   flex-grow: 50%;
 }
 .instagram .instagram-image svg {
@@ -710,8 +748,13 @@ main {
   border-radius: 50%;
   fill: white;
 }
-.instagram .social-text {
-  flex-grow: 50%;
+@media (min-width: 768px) {
+  .instagram .instagram-image svg {
+    padding: 10px;
+    margin: 20px;
+    height: 35px;
+    width: 35px;
+  }
 }
 .instagram .social-text p {
   color: #112a61;
@@ -719,19 +762,35 @@ main {
   font-weight: 900;
   margin: 2rem;
 }
+@media (min-width: 768px) {
+  .instagram .social-text p {
+    font-size: 1rem;
+    margin: 0.7rem;
+  }
+}
 .instagram .social-text :last-child {
   color: #1a1a1a;
   font-size: 2.3rem;
   font-weight: lighter;
 }
+@media (min-width: 768px) {
+  .instagram .social-text :last-child {
+    font-size: 1.75rem;
+  }
+}
 
 .twitter {
   display: flex;
   box-shadow: 0 0 2px black;
+  width: 98%;
   margin: 1rem;
 }
+@media (min-width: 768px) {
+  .twitter {
+    width: 20%;
+  }
+}
 .twitter .twitter-image {
-  width: 160px;
   flex-grow: 50%;
 }
 .twitter .twitter-image svg {
@@ -743,8 +802,13 @@ main {
   border-radius: 50%;
   fill: white;
 }
-.twitter .social-text {
-  flex-grow: 50%;
+@media (min-width: 768px) {
+  .twitter .twitter-image svg {
+    padding: 10px;
+    margin: 20px;
+    height: 35px;
+    width: 35px;
+  }
 }
 .twitter .social-text p {
   color: #112a61;
@@ -752,16 +816,28 @@ main {
   font-weight: 900;
   margin: 2rem;
 }
+@media (min-width: 768px) {
+  .twitter .social-text p {
+    font-size: 1rem;
+    margin: 0.7rem;
+  }
+}
 .twitter .social-text :last-child {
   color: #1a1a1a;
   font-size: 2.3rem;
   font-weight: lighter;
+}
+@media (min-width: 768px) {
+  .twitter .social-text :last-child {
+    font-size: 1.75rem;
+  }
 }
 
 @media (min-width: 768px) {
   .social-markup {
     box-sizing: content-box;
     display: flex;
+    width: 90vw;
   }
   .social-markup h3 {
     flex-grow: 3;
@@ -803,6 +879,7 @@ main {
 
 .recent-text {
   margin-left: 1rem;
+  text-align: left;
 }
 
 @media (min-width: 1024px) {
@@ -839,7 +916,7 @@ body {
   background-color: #000;
 }
 .inputy[type=checkbox]:checked + .labely:before {
-  transform: translateX(2.5rem);
+  transform: translateX(58px);
   background-color: #112a61;
 }
 
@@ -847,7 +924,7 @@ body {
   margin-right: 1rem;
   display: flex;
   width: 4rem;
-  height: 2rem;
+  height: 25px;
   box-shadow: 0 0 2px black;
   border-radius: 15px;
   padding-left: 2rem;
@@ -877,7 +954,9 @@ body {
   width: 100%;
 }
 .switch p {
-  flex-grow: 1;
+  width: 175%;
+  text-align: left;
+  padding-top: 7px;
 }
 .switch input, .switch label {
   flex-grow: 1;
@@ -888,7 +967,7 @@ body {
 @media (min-width: 768px) {
   .switch {
     display: grid;
-    grid-template-columns: 25% 25%;
+    grid-template-columns: 30% 25%;
   }
   .switch input, .switch label {
     grid-column-start: 2;
@@ -904,13 +983,21 @@ select {
   width: 80%;
 }
 
+.settings-button {
+  width: 90vw;
+}
+
+#timezone {
+  width: 90%;
+}
+
 #save {
-  width: 30%;
+  width: 43%;
 }
 
 #cancel {
   background-color: grey;
-  width: 30%;
+  width: 43%;
 }
 
 #traffic-chart,

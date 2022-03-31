@@ -14,5 +14,11 @@ form {
     }
 }
 .message {
+    @media (min-width: map-get($breakpoints, 'med')) {
+        width: 90vw;
+    }
+    @media (min-width: map-get($breakpoints, 'lg')) {
 	border-right: 1px solid rgb(133, 132, 132) ;
+    width: 100%v;
+    }
 }

@@ -2,6 +2,10 @@
 //  Base Styles
 // ======================================
 
+html {
+  width: 99vw;  
+}
+
 h3{ 
     @include header;
     font-weight: 900;
