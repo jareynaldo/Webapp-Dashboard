@@ -419,7 +419,7 @@ form textarea {
 @media (min-width: 1024px) {
   .message {
     border-right: 1px solid #858484;
-    width: 100%;
+    width: 100% v;
   }
 }
 
