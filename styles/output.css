@@ -8,24 +8,34 @@ h3 {
   display: flex;
   flex-direction: row;
   background-color: #112a61;
-  padding-right: 1.2rem;
-  padding-left: 1.2rem;
-  margin-right: 1.2rem;
-  margin-left: 1.2rem;
-  width: 90vw;
+  margin: 1.2rem;
+  width: 90%;
   color: #eeeeee;
-  border-radius: 5px;
+  border-radius: 9px;
   height: 3.5rem;
 }
 @media (min-width: 768px) {
   .alert-banner {
-    width: 85vw;
+    width: 98%;
   }
 }
 
 .alert-banner-close {
   text-align: right;
-  width: 48%;
+  width: 12%;
+  margin-right: 1rem;
+}
+
+.alrt-first {
+  width: 86%;
+  font-size: smaller;
+  height: 17px;
+  margin: 19.5px 0;
+}
+
+svg {
+  transform-origin: 50% 50%;
+  margin-right: 1rem;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -401,15 +411,10 @@ form textarea {
   border-right: 1px solid #858484;
 }
 
-* {
-  font-size: 2vw;
-}
-
 #grid-box {
   display: grid;
   text-align: center;
-  grid-template-columns: 100vw;
-  grid-template-rows: 3rem 3rem auto;
+  grid-template-columns: 100%;
   gap: 0 0;
   grid-template-areas: "head head head" "navigation navigation navigation" "mainContent mainContent mainContent";
 }
@@ -424,15 +429,18 @@ form textarea {
 }
 @media (min-width: 768px) {
   #grid-box {
-    grid-template-columns: 8.5vw 91.5vw;
-    grid-template-rows: 3rem 100%;
+    grid-template-columns: 8.5% 91.5%;
+    grid-template-rows: 3rem;
     grid-template-areas: "head head" "navigation mainContent " "navigation mainContent";
   }
 }
 
+.mainContent {
+  width: 92%;
+}
 .mainContent .tittle-flex {
   display: flex;
-  width: 100vw;
+  width: 100%;
 }
 .mainContent .tittle {
   flex-grow: 1;
@@ -451,10 +459,10 @@ form textarea {
     grid-row-end: 3;
   }
   .mainContent .social-container {
-    max-width: 94vw;
+    max-width: 90%;
   }
   .mainContent .tittle-flex {
-    width: 91.5vw;
+    width: 91.5%;
   }
   .mainContent .tittle {
     grid-area: tittle;
@@ -487,7 +495,7 @@ form textarea {
     grid-area: traffic;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .mainContent {
     grid-template-columns: 50% 50%;
     display: grid;
@@ -501,8 +509,8 @@ img {
 }
 
 svg {
-  size: 2rem;
-  width: 2rem;
+  size: 40px;
+  width: 40px;
   padding: 0.5rem;
 }
 
@@ -518,6 +526,8 @@ nav a {
 }
 nav a svg {
   fill: #eeeeee;
+  height: 45px;
+  width: 45px;
 }
 @media (min-width: 768px) {
   nav {
@@ -532,33 +542,38 @@ nav a svg {
 header {
   background-color: #112a61;
   color: #eeeeee;
-  height: 3rem;
+  height: 65px;
   width: 100%;
   display: flex;
   flex-direction: row;
   text-align: center;
 }
+header .myName {
+  height: 17px;
+  margin: 23px 2px 23px 0;
+}
 header svg {
   flex-grow: 0.1;
-  border-right: solid #eeeeee 2px;
+  border-right: solid #eeeeee 1px;
   width: 1.5rem;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 header img {
   height: 40px;
-  margin-top: 0.2rem;
+  margin-top: 12px;
   margin-left: 0.5rem;
+  margin-top: 12px;
   flex-grow: 1;
   max-width: 40px;
-}
-header #logo-name {
-  font-size: 1.5rem;
+  vertical-align: middle;
 }
 header strong {
   font-size: larger;
 }
 header p {
   margin-left: 0.5rem;
-  margin-top: 0.5rem;
+  font-size: 1.22rem;
   flex-grow: 1;
 }
 @media (min-width: 768px) {
@@ -566,6 +581,9 @@ header p {
     flex-grow: 4;
     text-align: left;
     margin-left: 1rem;
+  }
+  header p {
+    flex-grow: 0.3;
   }
 }
 
@@ -621,7 +639,6 @@ main {
 }
 
 .daily {
-  width: 90%;
   padding-right: 7%;
   padding-left: 3%;
   margin-top: 2rem;
@@ -639,94 +656,112 @@ main {
 
 .users {
   margin-top: 2rem;
+  margin-right: 2rem;
 }
 
 .facebook {
   display: flex;
-  background-color: #eeeeee;
   box-shadow: 0 0 2px black;
-  height: 5rem;
   margin: 1rem;
 }
 .facebook .facebook-image {
+  width: 160px;
+  flex-grow: 50%;
+}
+.facebook .facebook-image svg {
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  margin: 10px;
   background-color: #112a61;
   border-radius: 50%;
-  margin: 1rem;
-  max-width: 3.2rem;
+  fill: white;
+}
+.facebook .social-text {
+  flex-grow: 50%;
 }
 .facebook .social-text p {
   color: #112a61;
-  font-size: 1rem;
+  font-size: 3rem;
   font-weight: 900;
-  margin: 0.4rem;
+  margin: 2rem;
 }
 .facebook .social-text :last-child {
   color: #1a1a1a;
-  font-size: 1.7rem;
+  font-size: 2.3rem;
   font-weight: lighter;
 }
 
 .instagram {
   display: flex;
-  background-color: #eeeeee;
   box-shadow: 0 0 2px black;
-  height: 5rem;
   margin: 1rem;
 }
 .instagram .instagram-image {
+  width: 160px;
+  flex-grow: 50%;
+}
+.instagram .instagram-image svg {
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  margin: 10px;
   background-color: #112a61;
   border-radius: 50%;
-  margin: 1rem;
-  max-width: 3.2rem;
+  fill: white;
+}
+.instagram .social-text {
+  flex-grow: 50%;
 }
 .instagram .social-text p {
   color: #112a61;
-  font-size: 1rem;
+  font-size: 3rem;
   font-weight: 900;
-  margin: 0.4rem;
+  margin: 2rem;
 }
 .instagram .social-text :last-child {
   color: #1a1a1a;
-  font-size: 1.7rem;
+  font-size: 2.3rem;
   font-weight: lighter;
 }
 
 .twitter {
   display: flex;
-  background-color: #eeeeee;
   box-shadow: 0 0 2px black;
-  height: 5rem;
   margin: 1rem;
 }
 .twitter .twitter-image {
+  width: 160px;
+  flex-grow: 50%;
+}
+.twitter .twitter-image svg {
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  margin: 10px;
   background-color: #112a61;
   border-radius: 50%;
-  margin: 1rem;
-  max-width: 3.2rem;
+  fill: white;
+}
+.twitter .social-text {
+  flex-grow: 50%;
 }
 .twitter .social-text p {
   color: #112a61;
-  font-size: 1rem;
+  font-size: 3rem;
   font-weight: 900;
-  margin: 0.4rem;
+  margin: 2rem;
 }
 .twitter .social-text :last-child {
   color: #1a1a1a;
-  font-size: 1.7rem;
+  font-size: 2.3rem;
   font-weight: lighter;
-}
-
-.twitter,
-.instagram,
-.facebook {
-  width: 100%;
 }
 
 @media (min-width: 768px) {
   .social-markup {
     box-sizing: content-box;
     display: flex;
-    flex-wrap: wrap;
   }
   .social-markup h3 {
     flex-grow: 3;
@@ -751,7 +786,6 @@ main {
 }
 .members-container .members-text a {
   text-decoration: none;
-  font-size: 1.5vw;
 }
 @media (min-width: 768px) {
   .members-container {
@@ -771,7 +805,7 @@ main {
   margin-left: 1rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .recent-text {
     text-align: left;
     margin-left: 1rem;
@@ -794,9 +828,6 @@ main {
 }
 
 body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -885,7 +916,6 @@ select {
 #traffic-chart,
 #daily-chart,
 #users-chart {
-  max-width: 85vw;
   text-align: center;
 }
 

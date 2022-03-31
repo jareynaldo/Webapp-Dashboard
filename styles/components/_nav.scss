@@ -2,6 +2,8 @@
 //  Navigation Styles
 // ======================================
 
+
+
 nav {
     background-color: $color-primary-dark;
     @include flex;
@@ -11,6 +13,8 @@ nav {
         text-align: center;
         svg {
             fill: $color-white;
+            height: 45px;
+            width: 45px;
         }
     }
     @media (min-width: map-get($breakpoints, 'med')) {

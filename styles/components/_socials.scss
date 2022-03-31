@@ -10,17 +10,16 @@
 .twitter {
     @include socials(".twitter");
 }
-.twitter,
-.instagram,
-.facebook { 
-  width: 100%;
-}
+// .twitter,
+// .instagram,
+// .facebook { 
+
+// }
 
 @media (min-width: map-get($breakpoints, 'med')) {
   .social-markup {
     box-sizing: content-box;
      display: flex;
-     flex-wrap: wrap;
      h3{ 
        flex-grow: 3;
      }

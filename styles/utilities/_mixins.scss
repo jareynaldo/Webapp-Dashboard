@@ -17,31 +17,37 @@
 
 @mixin socials ($name) {
   display: flex;
-  background-color: $color-white;
   box-shadow: 0 0 2px black;
-  height: 5rem;
   margin: 1rem;
-  
  
   #{$name}-image {
+    width: 160px;
+    flex-grow: 50%;
+       svg {
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        margin: 10px;
         background-color: $color-primary;
         border-radius: 50%; 
-        margin: 1rem;
-        max-width: 3.2rem;
+        fill: white;
+        }
       
     }
   
   .social-text {
+    flex-grow: 50%;
        p { 
           color: $color-primary;
-          font-size: 1rem;
+          font-size: 3rem;
           font-weight: 900;
-          margin: .4rem;
+          margin: 2rem;
       }
       :last-child{ 
-          color: rgb(26, 26, 26);
-          font-size: 1.7rem;
-          font-weight: lighter;
+
+        color: rgb(26, 26, 26);
+        font-size: 2.3rem;
+        font-weight: lighter;
       }
   }
 }

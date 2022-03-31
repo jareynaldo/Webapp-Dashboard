@@ -1,40 +1,49 @@
 header {
   background-color: $color-primary;
   color: $color-white;
-  height: 3rem;
+  height: 65px;
   width: 100%;
   display: flex;
   flex-direction: row;
   text-align: center;
-
+  .myName { 
+    height: 17px ;
+    margin: 23px 2px 23px 0;
+  }
   svg {
     flex-grow: .1;
-    border-right: solid $color-white 2px;
+    border-right: solid $color-white 1px ;
     width: 1.5rem;
+    margin-top: 11px;
+    margin-bottom: 11px;
   }
   img {
     height: 40px;
-    margin-top: 0.2rem;
+    margin-top: 12px;
     margin-left: 0.5rem;
+    margin-top: 12px;
     @include flex-1;
     max-width: 40px;
-  }
-  #logo-name{
-     font-size: 1.5rem;
+    vertical-align: middle;
   }
   strong {
     font-size: larger;
   }
   p {
     margin-left: 0.5rem;
-    margin-top: 0.5rem;
-    @include flex-1;
+    font-size: 1.22rem;
+   @include flex-1;
   }
+ 
+  
     @media (min-width: map-get($breakpoints, 'med')) {
        #logo-name{ 
         flex-grow: 4;
         text-align: left;
         margin-left: 1rem;
        } 
+       p{ 
+        flex-grow: 0.3;
+       }
     }
 }
