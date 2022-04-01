@@ -6,7 +6,7 @@ let trafficCanvas = document.getElementById("traffic-chart");
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
 const alertBanner = document.getElementById("alert");
- 
+const circle = document.querySelector(`.circle`);
  
  // alert banner 
 
@@ -19,13 +19,14 @@ const alertBanner = document.getElementById("alert");
     `;
 
 
-   
+
 
 
 alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
-    alertBanner.style.display = "none"
+    alertBanner.style.display = "none";
+    circle.style.display = "none";
     }
 });
 

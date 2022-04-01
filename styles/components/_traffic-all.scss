@@ -3,7 +3,8 @@
 
 .chosen { 
     background-color: rgb(33, 163, 33);
-    border-radius: 30%;
+    border-radius: 15px;
+    color: white;
 }
 .traffic{ 
     padding-left: 1rem;
@@ -23,6 +24,22 @@
     }
 
         border-bottom: 50px $color-text;
+    @media (min-width: map-get($breakpoints, 'med')) {
+        .traffic-header { 
+            display: flex;
+            h3{ 
+                flex-grow: 10;
+            }
+            ul {
+                flex-grow: 1;
+                height: 20px;
+            }
+            .chosen{    
+                padding: 5px 2px;
+                height: 26px;
+            }
+        }
+    }
 }
 .daily, 
 .users {

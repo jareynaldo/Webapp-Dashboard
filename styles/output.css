@@ -419,7 +419,7 @@ form textarea {
 @media (min-width: 1024px) {
   .message {
     border-right: 1px solid #858484;
-    width: 100% v;
+    width: 100%;
   }
 }
 
@@ -442,7 +442,6 @@ form textarea {
 @media (min-width: 768px) {
   #grid-box {
     grid-template-columns: 8.5% 91.5%;
-    grid-template-rows: 3rem;
     grid-template-areas: "head head" "navigation mainContent " "navigation mainContent";
   }
 }
@@ -455,11 +454,11 @@ form textarea {
   width: 100%;
 }
 .mainContent .tittle {
-  flex-grow: 1;
   font-weight: bolder;
+  width: 90%;
 }
 .mainContent .tab {
-  flex-grow: 6;
+  width: 80%;
 }
 @media (min-width: 768px) {
   .mainContent {
@@ -474,7 +473,7 @@ form textarea {
     max-width: 90%;
   }
   .mainContent .tittle-flex {
-    width: 91.5%;
+    width: calc(97vw - 64px);
   }
   .mainContent .tittle {
     grid-area: tittle;
@@ -571,6 +570,11 @@ header svg {
   margin-top: 11px;
   margin-bottom: 11px;
 }
+header div :hover {
+  transition: ease-in 1s transform;
+  transform: rotate(360deg);
+  color: #193d8c;
+}
 header img {
   height: 40px;
   margin-top: 12px;
@@ -612,7 +616,8 @@ main {
 
 .chosen {
   background-color: #21a321;
-  border-radius: 30%;
+  border-radius: 15px;
+  color: white;
 }
 
 .traffic {
@@ -631,6 +636,22 @@ main {
   flex-grow: 1;
   list-style-type: none;
   font-weight: 900;
+}
+@media (min-width: 768px) {
+  .traffic .traffic-header {
+    display: flex;
+  }
+  .traffic .traffic-header h3 {
+    flex-grow: 10;
+  }
+  .traffic .traffic-header ul {
+    flex-grow: 1;
+    height: 20px;
+  }
+  .traffic .traffic-header .chosen {
+    padding: 5px 2px;
+    height: 26px;
+  }
 }
 
 .daily,
@@ -676,39 +697,55 @@ main {
   box-shadow: 0 0 2px black;
   width: 98%;
   margin: 1rem;
+  background-color: #eeeeee;
 }
 @media (min-width: 768px) {
   .facebook {
     width: 20%;
+    height: 80px;
   }
 }
 .facebook .facebook-image {
   flex-grow: 50%;
-}
-.facebook .facebook-image svg {
-  height: 100px;
-  width: 100px;
-  padding: 20px;
-  margin: 10px;
   background-color: #112a61;
   border-radius: 50%;
+  margin: 8px;
+  height: 132px;
+  width: 132px;
+}
+.facebook .facebook-image svg {
+  height: 80px;
+  width: 80px;
   fill: white;
+  padding: 25px;
 }
 @media (min-width: 768px) {
-  .facebook .facebook-image svg {
-    padding: 10px;
-    margin: 20px;
-    height: 35px;
-    width: 35px;
+  .facebook .facebook-image {
+    height: 60px;
+    max-width: 60px;
+    margin: 5;
+    padding: 0;
   }
+  .facebook .facebook-image svg {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin: 10px 0;
+  }
+}
+.facebook .social-text {
+  width: 90%;
 }
 .facebook .social-text p {
   color: #112a61;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
-  margin: 2rem;
+  margin: 1rem;
 }
 @media (min-width: 768px) {
+  .facebook .social-text {
+    width: 50%;
+  }
   .facebook .social-text p {
     font-size: 1rem;
     margin: 0.7rem;
@@ -730,39 +767,55 @@ main {
   box-shadow: 0 0 2px black;
   width: 98%;
   margin: 1rem;
+  background-color: #eeeeee;
 }
 @media (min-width: 768px) {
   .instagram {
     width: 20%;
+    height: 80px;
   }
 }
 .instagram .instagram-image {
   flex-grow: 50%;
-}
-.instagram .instagram-image svg {
-  height: 100px;
-  width: 100px;
-  padding: 20px;
-  margin: 10px;
   background-color: #112a61;
   border-radius: 50%;
+  margin: 8px;
+  height: 132px;
+  width: 132px;
+}
+.instagram .instagram-image svg {
+  height: 80px;
+  width: 80px;
   fill: white;
+  padding: 25px;
 }
 @media (min-width: 768px) {
-  .instagram .instagram-image svg {
-    padding: 10px;
-    margin: 20px;
-    height: 35px;
-    width: 35px;
+  .instagram .instagram-image {
+    height: 60px;
+    max-width: 60px;
+    margin: 5;
+    padding: 0;
   }
+  .instagram .instagram-image svg {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin: 10px 0;
+  }
+}
+.instagram .social-text {
+  width: 90%;
 }
 .instagram .social-text p {
   color: #112a61;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
-  margin: 2rem;
+  margin: 1rem;
 }
 @media (min-width: 768px) {
+  .instagram .social-text {
+    width: 50%;
+  }
   .instagram .social-text p {
     font-size: 1rem;
     margin: 0.7rem;
@@ -784,39 +837,55 @@ main {
   box-shadow: 0 0 2px black;
   width: 98%;
   margin: 1rem;
+  background-color: #eeeeee;
 }
 @media (min-width: 768px) {
   .twitter {
     width: 20%;
+    height: 80px;
   }
 }
 .twitter .twitter-image {
   flex-grow: 50%;
-}
-.twitter .twitter-image svg {
-  height: 100px;
-  width: 100px;
-  padding: 20px;
-  margin: 10px;
   background-color: #112a61;
   border-radius: 50%;
+  margin: 8px;
+  height: 132px;
+  width: 132px;
+}
+.twitter .twitter-image svg {
+  height: 80px;
+  width: 80px;
   fill: white;
+  padding: 25px;
 }
 @media (min-width: 768px) {
-  .twitter .twitter-image svg {
-    padding: 10px;
-    margin: 20px;
-    height: 35px;
-    width: 35px;
+  .twitter .twitter-image {
+    height: 60px;
+    max-width: 60px;
+    margin: 5;
+    padding: 0;
   }
+  .twitter .twitter-image svg {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin: 10px 0;
+  }
+}
+.twitter .social-text {
+  width: 90%;
 }
 .twitter .social-text p {
   color: #112a61;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
-  margin: 2rem;
+  margin: 1rem;
 }
 @media (min-width: 768px) {
+  .twitter .social-text {
+    width: 50%;
+  }
   .twitter .social-text p {
     font-size: 1rem;
     margin: 0.7rem;
@@ -837,7 +906,7 @@ main {
   .social-markup {
     box-sizing: content-box;
     display: flex;
-    width: 90vw;
+    width: 85vw;
   }
   .social-markup h3 {
     flex-grow: 3;
@@ -866,11 +935,14 @@ main {
 @media (min-width: 768px) {
   .members-container {
     display: flex;
-    padding-bottom: 1rem;
     margin-bottom: 1rem;
+  }
+  .members-container img {
+    margin-right: 1rem;
   }
   .members-container .members-text {
     flex-grow: 5;
+    text-align: left;
   }
   .members-container p {
     flex-grow: 1;
@@ -879,7 +951,7 @@ main {
 
 .recent-text {
   margin-left: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
@@ -916,8 +988,14 @@ body {
   background-color: #000;
 }
 .inputy[type=checkbox]:checked + .labely:before {
-  transform: translateX(58px);
-  background-color: #112a61;
+  transform: translateX(40px);
+  background-color: #a73030;
+  color: black;
+}
+@media (min-width: 768px) {
+  .inputy[type=checkbox]:checked + .labely:before {
+    transform: translateX(58px);
+  }
 }
 
 .labely {
@@ -933,7 +1011,7 @@ body {
   transition: transform 0.75s ease-in-out;
   transform-origin: 50% 50%;
   cursor: pointer;
-  background-color: #112a61;
+  background-color: #3a9e86;
 }
 .labely:before {
   transition: transform 0.75s ease;
@@ -943,15 +1021,22 @@ body {
   position: absolute;
   width: 1rem;
   height: 1rem;
-  background-color: white;
+  background-color: #ececec;
   border-radius: 50%;
   left: 2px;
+}
+@media (min-width: 1024px) {
+  .labely {
+    margin-left: 5rem;
+  }
 }
 
 .switch {
   padding-left: 1rem;
   display: flex;
   width: 100%;
+  display: grid;
+  grid-template-columns: 60% 30%;
 }
 .switch p {
   width: 175%;
@@ -963,15 +1048,12 @@ body {
   min-width: 2rem;
   max-width: 3rem;
   margin: 1rem 3rem;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 @media (min-width: 768px) {
   .switch {
-    display: grid;
-    grid-template-columns: 30% 25%;
-  }
-  .switch input, .switch label {
-    grid-column-start: 2;
-    grid-row-start: 1;
+    grid-template-columns: 40% 30%;
   }
 }
 
@@ -984,20 +1066,26 @@ select {
 }
 
 .settings-button {
-  width: 90vw;
+  width: 100%;
 }
 
 #timezone {
   width: 90%;
 }
 
-#save {
-  width: 43%;
+#save,
+#cancel {
+  width: 40%;
+}
+@media (min-width: 768px) {
+  #save,
+#cancel {
+    width: 42%;
+  }
 }
 
 #cancel {
   background-color: grey;
-  width: 43%;
 }
 
 #traffic-chart,

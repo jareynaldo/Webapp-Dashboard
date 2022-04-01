@@ -16,6 +16,14 @@ header {
     width: 1.5rem;
     margin-top: 11px;
     margin-bottom: 11px;
+
+  }
+  div{ 
+    :hover {
+      transition: ease-in 1s transform;
+      transform: rotate(360deg);
+      color: lighten($color-primary , 10%);
+    }
   }
   img {
     height: 40px;

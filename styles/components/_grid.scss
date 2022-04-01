@@ -23,7 +23,6 @@
     @media (min-width: map-get($breakpoints, 'med')) {
         
         grid-template-columns: 8.5% 91.5%;
-        grid-template-rows: 3rem ;
         grid-template-areas: 
         "head head"
         "navigation mainContent "
@@ -43,11 +42,11 @@
         width: 100%;
     }
     .tittle {
-        @include flex-1;
         font-weight: bolder ;
+        width: 90%;
     }
     .tab{ 
-        flex-grow: 6;
+        width: 80%;
     }
     
     @media (min-width: map-get($breakpoints, 'med')) {
@@ -71,7 +70,7 @@
             max-width: 90%;
         }
         .tittle-flex{ 
-            width: 91.5%;
+            width: calc(97vw - 64px);
         }
         .tittle {grid-area: tittle;}
         .daily {grid-area: daily;}

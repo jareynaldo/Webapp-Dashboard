@@ -25,11 +25,13 @@
     }
     @media (min-width: map-get($breakpoints, 'med')) { 
         display: flex;
-        padding-bottom: 1rem;
         margin-bottom: 1rem;
-        
+        img {
+            margin-right: 1rem;
+        }
         .members-text{ 
             flex-grow: 5;
+            text-align: left;
         }
         p { 
             flex-grow: 1;
@@ -39,7 +41,7 @@
 
 .recent-text {
     margin-left: 1rem;
-    text-align: left;
+    text-align: center;
 }
 
 @media (min-width: map-get($breakpoints, 'lg')) { 

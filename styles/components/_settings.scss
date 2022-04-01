@@ -9,7 +9,7 @@
 //        flex-grow: 1;
 //    }
 //    span { 
-//        flex-grow: 1;
+//        flex-grow: 1;af
 //        background-color: $color-primary;
 //        max-width: 20vw;
 //        margin-right: 1rem;
@@ -29,13 +29,19 @@ body {
 		transform: rotate(360deg);
 		background-color: #000;
 		&:before {
-			transform: translateX(58px);
-			background-color: $color-primary;
+			transform: translateX(40px);
+			@media (min-width: map-get($breakpoints, 'med'))  {
+				transform: translateX(58px);
+			}
+			background-color: rgb(167, 48, 48);
+			color: black;
 		}
 	}
 }
 
+
 .labely {
+
     margin-right: 1rem;
 	display: flex;
 	width: 4rem;
@@ -48,8 +54,7 @@ body {
 	transition: transform .75s ease-in-out;
 	transform-origin: 50% 50%;
 	cursor: pointer;
-    background-color: $color-primary;
-	
+    background-color: rgb(58, 158, 134);
 	&:before {
 		transition: transform .75s ease;
 		transition-delay: .5s;
@@ -58,9 +63,12 @@ body {
 		position: absolute;
 		width: 1rem;
 		height: 1rem;
-		background-color: white;
+		background-color: rgb(236, 236, 236);
 		border-radius: 50%;
 		left: 2px;
+	}
+	@media (min-width: map-get($breakpoints, 'lg'))  {
+		margin-left: 5rem;
 	}
    
 }
@@ -79,30 +87,37 @@ body {
         min-width: 2rem;
 		max-width: 3rem;
 		margin: 1rem 3rem;
+		grid-column-start: 2;
+		grid-row-start: 1;
     }
+	display: grid;
+	grid-template-columns: 60% 30%;
+	
 	@media (min-width: map-get($breakpoints, 'med'))  {
-		display: grid;
-		grid-template-columns: 30% 25%;
-		input, label{ 
-			grid-column-start: 2;
-			grid-row-start: 1;
-		}
+		
+		grid-template-columns: 40% 30%;
 	}
 }
 select {
     @include message(3rem);
     width: 80%;
+	
 }
 .settings-button{ 
-	width: 90vw;
+	width: 100%;
+	
 }
 #timezone{ 
 	width: 90%;
+	
 }
-#save { 
-    width: 43%;
+#save,
+#cancel { 
+    width: 40%;
+	@media (min-width: map-get($breakpoints, 'med'))  {
+		width: 42% ;
+	}
 }
 #cancel{ 
     background-color: grey;
-    width: 43%;
 }
