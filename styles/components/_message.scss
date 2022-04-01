@@ -7,10 +7,10 @@ form {
     display: flex;
     flex-direction: column;
     input{ 
-        @include message (2rem);
+        @include message (3rem);
     }
     textarea {
-        @include message (5rem);
+        @include message (5.3rem);
     }
 }
 .message {
@@ -20,5 +20,12 @@ form {
     @media (min-width: map-get($breakpoints, 'lg')) {
 	border-right: 1px solid rgb(133, 132, 132) ;
     width: 100%;
+    height: 100%;
+    
+    #send {
+        z-index: 2;
+        position: relative;
+        bottom: 0px;
+    }
     }
 }

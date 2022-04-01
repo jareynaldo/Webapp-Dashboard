@@ -39,14 +39,16 @@
     width: 92%;
     .tittle-flex{ 
         display: flex;
-        width: 100%;
+        width: 95%;
     }
     .tittle {
         font-weight: bolder ;
         width: 90%;
     }
     .tab{ 
-        width: 80%;
+        width: 85%;
+        border-bottom: 1px solid rgb(133, 132, 132) ;
+	    border-left: 1px solid rgb(133, 132, 132) ;
     }
     
     @media (min-width: map-get($breakpoints, 'med')) {
@@ -72,7 +74,11 @@
         .tittle-flex{ 
             width: calc(97vw - 64px);
         }
-        .tittle {grid-area: tittle;}
+        .tittle {grid-area: tittle;
+            font-weight: bolder ;
+            width: 20%;
+
+        }
         .daily {grid-area: daily;}
         .users {grid-area: users;}
         .social-container {grid-area: social;}

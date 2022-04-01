@@ -399,13 +399,13 @@ form {
   flex-direction: column;
 }
 form input {
-  height: 2rem;
+  height: 3rem;
   margin: 1rem;
   background-color: #eeeeee;
   border-radius: 5px;
 }
 form textarea {
-  height: 5rem;
+  height: 5.3rem;
   margin: 1rem;
   background-color: #eeeeee;
   border-radius: 5px;
@@ -420,6 +420,12 @@ form textarea {
   .message {
     border-right: 1px solid #858484;
     width: 100%;
+    height: 100%;
+  }
+  .message #send {
+    z-index: 2;
+    position: relative;
+    bottom: 0px;
   }
 }
 
@@ -451,14 +457,16 @@ form textarea {
 }
 .mainContent .tittle-flex {
   display: flex;
-  width: 100%;
+  width: 95%;
 }
 .mainContent .tittle {
   font-weight: bolder;
   width: 90%;
 }
 .mainContent .tab {
-  width: 80%;
+  width: 85%;
+  border-bottom: 1px solid #858484;
+  border-left: 1px solid #858484;
 }
 @media (min-width: 768px) {
   .mainContent {
@@ -477,6 +485,8 @@ form textarea {
   }
   .mainContent .tittle {
     grid-area: tittle;
+    font-weight: bolder;
+    width: 20%;
   }
   .mainContent .daily {
     grid-area: daily;
@@ -609,9 +619,6 @@ main {
 
 .tab {
   background-color: #eeeeee;
-  padding: 2rem;
-  border-right: 4px black;
-  border-bottom: 4px black;
 }
 
 .chosen {
@@ -947,11 +954,46 @@ main {
   .members-container p {
     flex-grow: 1;
   }
+  .members-container .bracket {
+    display: block;
+  }
 }
 
 .recent-text {
   margin-left: 1rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .recent-text {
+    text-align: left;
+    display: grid;
+    gap: 0;
+    width: 100%;
+    height: 112px;
+    grid-template-columns: 90% 10%;
+    grid-template-areas: "name bracket" "day bracket";
+  }
+  .recent-text .bracket {
+    grid-area: bracket;
+  }
+  .recent-text :first-child {
+    grid-area: name;
+  }
+  .recent-text :nth-child(2) {
+    grid-area: day;
+  }
+  .recent-text p {
+    height: 18.4px;
+    margin: 0;
+  }
+}
+
+.bracket {
+  display: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 2rem;
+  color: #06cf2e;
 }
 
 @media (min-width: 1024px) {
