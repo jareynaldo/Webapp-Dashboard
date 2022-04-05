@@ -453,29 +453,32 @@ form textarea {
 }
 
 .mainContent {
-  width: 92%;
+  width: 99%;
+  text-align: center;
 }
 .mainContent .tittle-flex {
   display: flex;
-  width: 95%;
+  width: 99vw;
 }
 .mainContent .tittle {
   font-weight: bolder;
-  width: 90%;
+  width: 40%;
 }
 .mainContent .tab {
-  width: 85%;
+  width: 60%;
   border-bottom: 1px solid #858484;
   border-left: 1px solid #858484;
 }
 @media (min-width: 768px) {
   .mainContent {
+    width: 97%;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "tittle  tab" "alert alert" "traffic traffic" "daily users" "social social" "members members" "recent recent" "message message" "settings settings";
   }
   .mainContent .tab {
     grid-row-end: 3;
+    width: 75%;
   }
   .mainContent .social-container {
     max-width: 90%;
@@ -486,7 +489,7 @@ form textarea {
   .mainContent .tittle {
     grid-area: tittle;
     font-weight: bolder;
-    width: 20%;
+    width: 25%;
   }
   .mainContent .daily {
     grid-area: daily;
@@ -522,6 +525,12 @@ form textarea {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "tittle  tab" "alert alert" "traffic traffic" "daily users" "social social" "members recent" "members recent" "message settings";
+  }
+  .mainContent .tittle {
+    width: 22%;
+  }
+  .mainContent .tab {
+    width: 75%;
   }
 }
 
@@ -571,7 +580,8 @@ header {
 }
 header .myName {
   height: 17px;
-  margin: 23px 2px 23px 0;
+  margin: 23px 2px 23px 5px;
+  font-size: smaller;
 }
 header svg {
   flex-grow: 0.1;
@@ -599,7 +609,7 @@ header strong {
 }
 header p {
   margin-left: 0.5rem;
-  font-size: 1.22rem;
+  font-size: 1rem;
   flex-grow: 1;
 }
 @media (min-width: 768px) {
@@ -630,6 +640,7 @@ main {
 .traffic {
   padding-left: 1rem;
   border-top: none;
+  width: 90%;
   border-bottom: 50px #000000;
 }
 .traffic h3 {
@@ -665,6 +676,7 @@ main {
 .users {
   margin-bottom: 2rem;
   border-bottom: 1px solid #858484;
+  width: 90%;
 }
 @media (min-width: 768px) {
   .daily,
@@ -702,7 +714,7 @@ main {
 .facebook {
   display: flex;
   box-shadow: 0 0 2px black;
-  width: 98%;
+  width: 97%;
   margin: 1rem;
   background-color: #eeeeee;
 }
@@ -717,14 +729,14 @@ main {
   background-color: #112a61;
   border-radius: 50%;
   margin: 8px;
-  height: 132px;
-  width: 132px;
+  height: 100px;
+  width: 100px;
 }
 .facebook .facebook-image svg {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   fill: white;
-  padding: 25px;
+  padding: 19.5px;
 }
 @media (min-width: 768px) {
   .facebook .facebook-image {
@@ -741,11 +753,11 @@ main {
   }
 }
 .facebook .social-text {
-  width: 90%;
+  width: 80%;
 }
 .facebook .social-text p {
   color: #112a61;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   margin: 1rem;
 }
@@ -772,7 +784,7 @@ main {
 .instagram {
   display: flex;
   box-shadow: 0 0 2px black;
-  width: 98%;
+  width: 97%;
   margin: 1rem;
   background-color: #eeeeee;
 }
@@ -787,14 +799,14 @@ main {
   background-color: #112a61;
   border-radius: 50%;
   margin: 8px;
-  height: 132px;
-  width: 132px;
+  height: 100px;
+  width: 100px;
 }
 .instagram .instagram-image svg {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   fill: white;
-  padding: 25px;
+  padding: 19.5px;
 }
 @media (min-width: 768px) {
   .instagram .instagram-image {
@@ -811,11 +823,11 @@ main {
   }
 }
 .instagram .social-text {
-  width: 90%;
+  width: 80%;
 }
 .instagram .social-text p {
   color: #112a61;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   margin: 1rem;
 }
@@ -842,7 +854,7 @@ main {
 .twitter {
   display: flex;
   box-shadow: 0 0 2px black;
-  width: 98%;
+  width: 97%;
   margin: 1rem;
   background-color: #eeeeee;
 }
@@ -857,14 +869,14 @@ main {
   background-color: #112a61;
   border-radius: 50%;
   margin: 8px;
-  height: 132px;
-  width: 132px;
+  height: 100px;
+  width: 100px;
 }
 .twitter .twitter-image svg {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   fill: white;
-  padding: 25px;
+  padding: 19.5px;
 }
 @media (min-width: 768px) {
   .twitter .twitter-image {
@@ -881,11 +893,11 @@ main {
   }
 }
 .twitter .social-text {
-  width: 90%;
+  width: 80%;
 }
 .twitter .social-text p {
   color: #112a61;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   margin: 1rem;
 }
@@ -909,6 +921,9 @@ main {
   }
 }
 
+.social-markup {
+  width: 95%;
+}
 @media (min-width: 768px) {
   .social-markup {
     box-sizing: content-box;
@@ -922,6 +937,7 @@ main {
     flex-grow: 1;
   }
 }
+
 .members {
   border-top: 1px solid #858484;
 }
@@ -1081,7 +1097,6 @@ body {
   grid-template-columns: 60% 30%;
 }
 .switch p {
-  width: 175%;
   text-align: left;
   padding-top: 7px;
 }

@@ -35,23 +35,24 @@
 
 
 .mainContent{ 
-    
-    width: 92%;
+    width: 99%;
+    text-align: center;
     .tittle-flex{ 
         display: flex;
-        width: 95%;
+        width: 99vw;
     }
     .tittle {
         font-weight: bolder ;
-        width: 90%;
+        width: 40%;
     }
     .tab{ 
-        width: 85%;
+        width: 60%;
         border-bottom: 1px solid rgb(133, 132, 132) ;
 	    border-left: 1px solid rgb(133, 132, 132) ;
     }
     
     @media (min-width: map-get($breakpoints, 'med')) {
+        width: 97%;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-areas: 
@@ -67,6 +68,7 @@
         ;
         .tab {
             grid-row-end: 3;
+            width: 75%;
         }
         .social-container{ 
             max-width: 90%;
@@ -74,9 +76,10 @@
         .tittle-flex{ 
             width: calc(97vw - 64px);
         }
-        .tittle {grid-area: tittle;
+        .tittle {
+            grid-area: tittle;
             font-weight: bolder ;
-            width: 20%;
+            width: 25%;
 
         }
         .daily {grid-area: daily;}
@@ -105,7 +108,12 @@
         "members recent"
         "message settings"
         ;
-       
+       .tittle {
+           width: 22%;
+       }
+        .tab {
+            width: 75%;
+        }
     }
     
 }

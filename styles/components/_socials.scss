@@ -15,17 +15,19 @@
 // .facebook { 
 
 // }
+.social-markup {
+  width: 95%;
+  @media (min-width: map-get($breakpoints, 'med')) {
 
-@media (min-width: map-get($breakpoints, 'med')) {
-  .social-markup {
     box-sizing: content-box;
-     display: flex;
-     width: 85vw;
-     h3{ 
-       flex-grow: 3;
-     }
-     div{ 
-       flex-grow: 1;
-     }
+    display: flex;
+    width: 85vw;
+    h3{ 
+      flex-grow: 3;
+    }
+    div{ 
+      flex-grow: 1;
+    }
+
   }
 }

@@ -18,7 +18,7 @@
 @mixin socials ($name) {
   display: flex;
   box-shadow: 0 0 2px black;
-  width: 98%;
+  width: 97%;
   margin: 1rem;
   background-color: $color-white;
   @media (min-width: map-get($breakpoints, 'med')) {
@@ -32,13 +32,13 @@
     background-color: $color-primary;
     border-radius: 50%; 
     margin: 8px;
-    height: 132px;
-    width: 132px;
+    height: 100px;
+    width: 100px;
     svg {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
         fill: white;
-        padding: 25px;
+        padding: 19.5px;
         }
     @media (min-width: map-get($breakpoints, 'med')) {
       height: 60px;
@@ -56,10 +56,10 @@
     }
   
   .social-text {
-    width: 90%;
+    width: 80%;
     p { 
       color: $color-primary;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 900;
       margin: 1rem;
       
